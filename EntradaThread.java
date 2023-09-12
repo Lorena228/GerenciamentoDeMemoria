@@ -16,3 +16,5 @@ public class EntradaThread extends Thread {
     }
   }
 }
+
+2-W-8

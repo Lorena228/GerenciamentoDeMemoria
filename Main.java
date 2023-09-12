@@ -3,6 +3,7 @@ public class Main {
 
     EntradaThread thread1 = new EntradaThread("4-R,5-R,0-R,4-w-2");
     EntradaThread thread2 = new EntradaThread("1-R,5-W-4,2-R,2-w-6");
+    MFisica mFisica = new MFisica();
     thread1.QuebraString();
     thread2.QuebraString();
 
