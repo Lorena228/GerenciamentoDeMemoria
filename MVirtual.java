@@ -1,11 +1,27 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class MVirtual {
 
-  public int[] MV = new int[15];
-  public String page;
+  Map<Integer, String> MVirtual = new HashMap<Integer, String>();
+  public String[] operacao;
+  public String[] operacaoQuebrada = new String[3];
 
-  public void preencheMVirtual(String page) {
-    for (int i = 0; i < MV.length; i++) {
-      MV[i] = page;
-    }
+  public MVirtual(String[] entradaquebrada) {
+    this.operacao = entradaquebrada;
   }
+
+  public void indiceMVOperação(String[] operacao) {
+    System.out.println(operacao[0]);
+  }
+
+  /*
+   * public void divideOperacao() {
+   * 
+   * operacaoQuebrada = operacao.split("-");
+   * for (String valores : operacaoQuebrada) {
+   * System.out.println(valores);
+   * }
+   * }
+   */
 }

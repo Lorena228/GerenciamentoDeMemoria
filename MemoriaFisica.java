@@ -1,23 +1,23 @@
 public class MemoriaFisica {
     String[] espaco = new String[8];
     Disco disco; // Referência para a classe Disco
-    MemoriaVirtual memoriaVirtual; // Referência para a classe MemoriaVirtual
 
-    public MemoriaFisica(Disco disco, MemoriaVirtual memoriaVirtual) {
+    public MemoriaFisica(Disco disco, MVirtual memoriaVirtual) {
         this.disco = disco;
         this.memoriaVirtual = memoriaVirtual;
     }
 
-    public void pegarDados() {
+    public String insereDadoMF(String conteudo) {
         if (cheia()) {
             moverParaDisco();
         }
 
         int posicaoVazia = encontrarPosicaoVazia();
         if (posicaoVazia != -1) {
-            String dado = memoriaVirtual.preencheMvirtual();
-            espaco[posicaoVazia] = dado;
+            espaco[posicaoVazia] = conteudo;
         }
+
+        return String.valueOf(posicaoVazia);
     }
 
     private boolean cheia() {
@@ -49,4 +49,3 @@ public class MemoriaFisica {
         }
     }
 }
-
